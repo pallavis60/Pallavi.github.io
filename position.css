@@ -1,0 +1,51 @@
+.positionfixed{
+    position: fixed;
+    top:0;
+   
+    
+}
+.postion{
+    position: fixed;
+    right: 0%;
+}
+.postion{
+    position: relative;
+    left: 200px;
+}
+.positionVirat{
+    position:absolute;
+    top:0;
+    left:0;
+    align-items: center;
+   
+}
+.relative{
+    position: relative;    
+}
+.positionMaxwell{
+    position: absolute;
+    top:0;
+    left: 800px;
+    
+}
+
+ul{
+    list-style-type: none;
+    background-color: black;
+}
+li{
+    display:inline-block;
+    color: white;
+    padding: 10px;
+    background-color: aqua;
+}
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+/*pseudo selector  */
+
+li:hover{
+    background-color: green;
+}
