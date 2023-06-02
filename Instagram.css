@@ -1,0 +1,94 @@
+h1{
+    font-size: xx-large;
+    text-align: center;
+    font-style: italic;
+    color: black;
+    font-weight: bold; 
+    
+}
+form{
+  margin: 30px 550px 50px 60px;
+  padding:4px 70px 100px 70px;
+  width:200px;
+  box-sizing:content;
+  border:1px solid cornflowerblue;
+  position: relative;
+  left:450px;
+}
+#inst1{
+    width:300px;
+    height: 30px;
+    border:1px solid cornflowerblue;
+    text-align: justify;
+    border-radius: 10px;
+    position: relative;
+    right:50px; 
+    background-color: azure;
+
+}
+#inst2{
+    width:300px;
+    height: 30px;
+    border:1px solid cornflowerblue;
+    text-align: justify;
+    border-radius: 10px;
+    position: relative;
+    right:50px;
+    top:10px;
+    background-color:azure;
+    
+}
+#botton1{
+    border-radius: 5px;
+    border:1px solid cornflowerblue;
+    position: relative;
+   text-align: center;
+    left: 50px;
+    right:400px;
+    top:20px;
+    background-color: aqua;
+
+}
+p{
+    position: relative;
+   top:30px;
+}
+#botton2{
+    position: relative;
+   text-align: center;
+    left: 30px;
+    right:400px;
+    top:50px;
+    color: blue;
+    text-decoration:none;
+}
+#ParaG{
+    color: blueviolet;
+    position: relative;
+     top:50px;
+     left:30px;
+}
+#form{
+    margin: 30px 550px 50px 60px;
+    padding:1px 70px 15px 70px;
+    width:200px;
+    box-sizing:content;
+    border:1px solid cornflowerblue;
+    position: relative;
+    bottom:30px;
+    left:450px;
+}
+#ParaG1{
+    color: black;
+    position: relative;
+     bottom:300px;
+    
+     
+     top:10px;
+     text-align: center;
+
+}
+
+
+
+    

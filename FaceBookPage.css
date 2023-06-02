@@ -1,0 +1,92 @@
+h1{
+    font-size: xx-large;
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+    text-shadow: 3px 2px 3px blue;
+    position: relative;
+    top: 200px;
+    right:200px;
+    
+    
+
+
+}
+#para{
+    text-align: center;
+    font-size: xx-large;
+    position: relative;
+    top: 200px;
+    right:200px;
+}
+form{
+    border: 3px solid white;
+    margin: 30px 450px 50px 100px;
+    padding:50px 10px 50px 10px;
+    box-sizing: content-box;
+    border-radius: 50px;
+    background-color:white ;
+    float: right;
+    border-width: 50px;
+    text-align: center;
+    position: relative;
+    left:400px;
+    bottom:100px;
+}
+div{
+    padding:5px;
+}
+body{
+    background-color: whitesmoke;
+    margin: none;
+}
+
+#button1{
+    background-color: dodgerblue;
+    width:300px;
+    height: 50px;
+    border-radius: 0cqmax;
+    position: relative;
+    bottom:50px;
+
+}
+#button2{
+    background-color: green;
+    width:200px ;
+    height:50px ;
+    border-radius: 0cqmax;
+    position: relative;
+    bottom:50px;
+}
+#intro{
+    color:blueviolet;
+    position: relative;
+    bottom:50px;
+}
+#mail{
+    width:250px;
+    height: 50px;
+    border:3px solid lightblue;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    bottom:50px;
+}
+
+#pass{
+    width:250px;
+    height: 50px;
+    border:3px solid lightblue;
+    text-align:center ;
+    border-radius: 10px;
+    position: relative;
+    bottom:50px;
+
+}
+
+hr{
+    position: relative;
+    bottom:50px;
+
+
+}
