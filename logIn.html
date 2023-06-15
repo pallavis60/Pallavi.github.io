@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Log In Page</title>
+    </head>
+    <Script>
+
+        function logIn(){
+            console.log("Calling LogIn Function")
+            var logInButton = document.getElementById("logInButton")
+            console.log(logInButton)
+            console.log(logInButton.value)
+
+           logInButton.style.backgroundColor='blue'
+           logInButton.style.color='white'
+
+
+           var email = document.getElementById("email")
+           var emailMessage = document.getElementById("emailMessage")
+           emailMessage.innerHTML = ''
+           if(email.value==''){
+            console.log("Please Enter EmailId")
+
+            emailMessage.innerHTML="Please Enter EmailId"
+            emailMessage.style.color='red'
+            return false
+           }
+
+
+           var password = document.getElementById("password")
+           var passwordMessage = document.getElementById("passwordMessage")
+           passwordMessage.innerHTML=''
+           if(password.value ==''){
+            console.log("Please Enter Password")
+            passwordMessage.innerHTML="Please Enter Password"
+            passwordMessage.style.color='red'
+            return false;
+           }else if(password.value.length<4){
+            console.log("Pssword is weak")
+            passwordMessage.innerHTML="Passwod is weak"
+            password.style.color='red'
+            return false;
+           }
+
+           let formDataString = localStorage.getItem("registrationForm")
+                 console.log(formDataString)
+               //  console.log(formDataString.email)
+                 let formDataObject = JSON.parse(formDataString)
+                 console.log(formDataObject)
+                 console.log(formDataObject.email)
+                 if(email.value == formDataObject.emailId && password.value==formDataObject.password){
+                    console.log("Login Success")
+                    sessionStorage.setItem("username", formDataObject.firstName)
+                        window.location.href='../OPEN EDITORS/home.html'
+                  //  window.location.href='Bootstrap1.html'
+                    return false
+                 }else{
+                    console.log("Email or Password is invalid")
+                 }
+          
+        }
+
+    </Script>
+    <body>
+        <form>
+            <div>
+                <label>Enter Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter emailId">
+                <span id="emailMessage"></span>
+            </div>
+            <div>
+                <label>Enter Password</label>
+                <input type="password" name="password" id="password" placeholder="password">
+                <span id="passwordMessage"></span>
+            </div>
+            <div>
+                <button type="button" onclick="logIn()" id="logInButton">LogIn</button>
+               
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,175 @@
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <title>JavaScript</title>
+        <script>
+            //console.log()
+            //System.out.println()
+            console.log("We are learing JavaScript")
+            //how to variables i JS
+            //datatype variableName
+            //var variableName
+            //semicolon is optional in js
+            //var is the keyword to declare all the variable
+
+            var javaScript = 'java';
+            console.log(javaScript)
+            javaScript = 'javaScript'
+            console.log(javaScript)
+            console.log(javaScript)
+            console.log(typeof(javaScript))
+
+            var b= 10;
+            console.log(b);
+            console.log(typeof(b))
+
+            var c= true
+            console.log(c)
+            console.log(typeof(c))
+            c=10.23
+            console.log(typeof(c))
+            var d;
+            console.log(d)
+            console.log(typeof(d))
+
+            //DataType in JavaScript 
+            //number,string,boolean,undefined
+
+            //to declare function i java Script
+            function display(){
+                console.log("Calling display function")
+            }
+
+
+            //Syntax of JavaScript
+            //print statment
+
+            function display(){
+                console.log("Non-parameterized constructo")
+            }
+
+            function add(x , y){
+              console.log("Calling parameterzed construtor"); 
+              console.log(x)
+              console.log(y)
+              return x+y 
+            }
+            console.log(add(10,20))
+
+            function subtraction(x ,y){
+                console.log(x)
+                console.log(y)
+                return x-y
+            }
+            console.log(subtraction(30,10))
+
+
+            function clickMe(){
+                console.log("User Clicked a button")
+                var clickMessage = document.getElementById("ClickMessage")
+                clickMessage.innerHTML="UserClicked a button"
+                clickMessage.style.color='green'
+
+                var clickColor=document.getElementById("clickColor")
+                clickColor.style.backgroundColor="red"
+                clickColor.style.color="white"
+
+            }
+
+            function submit(){
+                console.log("User Submit the Data")
+            }
+
+            function mouseOver(){
+                console.log("User MouseOver a button")
+            }
+
+            function clickMeOnMouse(){
+                console.log("User MouseOver or Clicked The button")
+            }
+
+            function addition(){
+            var num1 =   document.getElementById("num1")
+            console.log(num1)
+            console.log(num1.value)
+             var num2 =document.getElementById("num2")
+             console.log(num1)
+             console.log(num2.value)
+            var result = parseInt(num1.value)+parseInt(num2.value)
+            console.log(result)
+
+            var addition = document.getElementById("addition")
+            console.log(addition)
+            addition.innerHTML = 'Result is' +result
+            
+            
+            }
+
+            function sub(){
+                var num1 = document.getElementById("num1")
+                console.log(num1)
+                console.log(num1.value)
+                var num2 = document.getElementById("num2")
+                console.log(num2)
+                console.log(num2.value)
+                var result2= parseInt(num1.value)-parseInt(num2.value)
+                console.log(result2)
+
+                var sub = document.getElementById("sub")
+                console.log(sub)
+                sub.innerHTML ='Result is'+ result2
+            }
+            function multiplication(){
+                var num1 = document.getElementById("num1")
+                console.log(num1)
+                console.log(num1.value)
+                var num2 = document.getElementById("num2")
+                console.log(num2)
+                console.log(num2.value)
+                var result3 =parseInt(num1.value)*parseInt(num2.value)
+                console.log(result3)
+            }
+
+            function division(){
+                var num1 = document.getElementById("num1")
+                console.log(num1)
+                console.log(num1.value)
+                var num2 = document.getElementById("num2")
+                console.log(num2)
+                console.log(num2.value)
+                var result4=parseInt(num1.value)/parseInt(num2.value)
+                console.log(result4)
+  
+            }
+            
+        </script>
+    </head>
+
+    <body>
+        <button onclick="clickMe()" id="clickColor"> ClickMe </button>
+        <span id="ClickMessage"></span>
+        <button onclick="submit()">Submit</button>
+
+        <button onmouseover="mouseOver()">Mouse Over</button>
+        <button onmouseenter="clickMeOnMouse()" onclick="clickMe()"></button>ClickMeOnMouse</button>
+<form>
+    <div>
+        <label>Enter Number1</label>
+        <input type="text" name="num1" id="num1">
+    </div>
+    <div>
+        <label>Enter Number2</label>
+        <input type="text" name="text" id="num2">
+    </div>
+    <button type="button" onclick="addition()">Addition</button><br>
+    <button type="button" onclick="sub()">Sub</button><br>
+    <button type="button" onclick="multiplication()">Multiplication</button><br>
+    <button type="button" onclick="division()">Division</button><br>
+
+    
+    <span id="addition"></span>
+    <span id="sub"></span>
+</form>
+
+    </body>
+ </html>

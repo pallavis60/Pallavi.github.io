@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RegistrationForm</title>
+
+       <script>
+            function register(){
+                console.log("calling register Function")
+                var regButton = document.getElementById("regButton")
+                regButton.style.backgroundColor='green'
+                regButton.style.color='white'
+
+                var firstName = document.getElementById("firstName")
+                console.log(firstName.value)
+                var firstNameMessage = document.getElementById("firstNameMessage")
+                firstNameMessage.innerHTML=''
+                if(firstName.value==''){
+                    console.log("Please Enter FirstName")
+
+                    firstNameMessage.innerHTML="Please Enter First Name"
+
+                    firstNameMessage.style.color='red'
+                    return false
+                }
+
+                var emailId = document.getElementById("emailId")
+                console.log(emailId.value)
+                var emailMessage = document.getElementById("emailMessage")
+                emailMessage.innerHTML=''
+                if(emailId.value==''){
+                    console.log("Please Enter Email")
+                    emailMessage.innerHTML="Please Enter Email"
+                    emailMessage.style.color='red'
+                    return false
+                }
+
+                var number = document.getElementById("number")
+                console.log(number.value)
+                var numberMessage = document.getElementById("numberMessage")
+
+                numberMessage.innerHTML=''
+                if(number.value==''){
+                    console.log("Please Enter MobileNumber")
+                    numberMessage.innerHTML="Please Enter MobileNumber"
+                    numberMessage.style.color="red"
+                   
+                }
+                else if(number.value.length<10 || number.value.length>10){
+                    console.log("Please Enter valid Mobile Number")
+                    numberMessage.innerHTML="Please Enter valid Mobile Number"
+                    numberMessage.style.color="red"
+                    return false;
+                }
+
+                var password = document.getElementById("password")
+                console.log(password.value)
+                var passwordMessage = document.getElementById("passwordMessage")
+
+                passwordMessage.innerHTML=''
+                if(password.value==''){
+                    console.log("Please Enter Valid Password")
+                    passwordMessage.innerHTML="Please Enter Password"
+                    passwordMessage.style.color="red"
+                    return false
+                }
+                else if(password.value<5){
+                    console.log("Password is weak")
+                    passwordMessage.innerHTML="Password is weak"
+                    passwordMessage.style.color='red'
+                    return false;
+                } 
+
+                var cityMessage = document.getElementById("cityMessage")
+                console.log(document.formName.city.value)
+                cityMessage.innerHTML=''
+                if(document.formName.city.value=='0'){
+                    console.log("Please Select City")
+                    cityMessage.innerHTML="Please Select City"
+                    cityMessage.style.color="red"
+                    return false; 
+
+                }
+                console.log(document.formName.gender.checked)
+                console.log(document.formName.gender[0])
+                console.log(document.formName.gender[1])
+                console.log(document.formName.gender[2])
+
+
+                var genderMessage = document.getElementById("genderMessage")
+                genderMessage.innerHTML=''
+
+                if(document.formName.gender[0].checked==false &&
+                document.formName.gender[1].checked==false &&
+                document.formName.gender[2].checked==false){
+                    console.log("Please Enter Gender")
+                    genderMessage.innerHTML="Please Select Gender"
+                    genderMessage.style.color ='red'
+                    return false;
+               
+                }
+
+                var genderData
+                if(document.formName.gender[0].checked==true){
+                  console.log(genderData=document.formName.gender[0].value)
+                }
+                else if(document.formName.gender[1].checked==true){
+                   console.log( genderData=document.formName.gender[1].value)
+                }
+                else if(document.formName.gender[2].checked==true){
+                  console.log(genderData=document.formName.gender[2].value)
+                }
+
+                console.log(firstName.value)
+                console.log(emailId.value)
+                console.log(number.value)
+                console.log(password.value)
+                console.log(genderData)
+                console.log(document.formName.city.value)
+
+           // localStorage.setItem("registrationForm","formData")
+
+                var formData={
+                    "firstName" : firstName.value,
+                    "emailId" :emailId.value,
+                    "number":number.value,
+                    "password":password.value,
+                    "city":document.formName.city.value,
+                    "gender": genderData
+
+                }
+
+                console.log(formData)
+                console.log(typeof(formData))
+
+                var formDataString = JSON.stringify(formData)
+                console.log(typeof(formData))
+                console.log(formDataString)
+
+                localStorage.setItem("registrationForm",formDataString)   
+ 
+                }
+        </script>
+    </head>
+    <body>
+        <form name="formName">
+            <div>
+                <label>Enter First Name</label>
+                <input type="text" name="firstName" id="firstName">
+                <span id="firstNameMessage"></span>
+            </div>
+            <div>
+                <label>Enter Email</label>
+                <input type="email" name="email" id="emailId">
+                <span id="emailMessage"></span>
+            </div>
+            <div>
+                <label>Enter MobileNumber</label>
+                <input type="number" name="number" id="number">
+                <span id="numberMessage"></span>
+            </div>
+            <div>
+                <label>Enter Password</label>
+                <input type="password" name="password" id="password">
+                <span id="passwordMessage"></span>
+            </div>
+            <div>
+                <label>Select City</label>
+                <select name="city">
+                    <option value="0">--Select City---</option>
+                    <option>Bangalore</option>
+                    <option>Mandya</option>
+                    <option>Mysuru</option>
+                    <option>Shivamogga</option>
+                </select>
+                <span id="cityMessage"></span>
+            </div>
+            <div>
+                <label>Select Gender</label>
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female">Female
+                <input type="radio" name="gender" value="others">Others
+                <span id="genderMessage"></span>
+            </div>
+            <div>
+                
+            </div>
+            <div>
+                <button type="button" onclick="register()" id="regButton">Register</button>
+            </div>
+        </form>
+    </body>
+</html>

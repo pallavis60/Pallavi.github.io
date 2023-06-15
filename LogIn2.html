@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LogIn</title>
+        <script>
+            var a 
+            console.log(a)
+            a=10
+            console.log(a)
+            var a
+            console.log(a)
+
+            let b 
+            console.log(b)
+            b="javaScript"
+            console.log(b)
+            //let b //console.log(b)
+            const PI=3.14
+            console.log(PI)
+            //var,let,const //how to navigate to another page in javaScript
+            //== and ===
+
+            //arrays in JavaScript
+            //int a[] = new a[10]
+            let arr =[]
+            arr=[1,2,3,4,5]
+            console.log(arr)
+            console.log(arr.length)
+            console.log("---------------------------")
+
+            for(let i=1;i<=arr.length;i++){
+                console.log(arr[i-1])
+            }
+
+            let arr1 = [1,'Java',true,2,false]
+            for(let i=0;i<arr1.length;i++){
+                console.log(arr1[i])
+            } 
+
+            let arr3=[]
+            arr3.push("javaScript")
+            //it add element at end of an array
+            console.log(arr3)
+            arr3.push("arry")
+            arr3.push("dynamic")
+            console.log(arr3)
+            arr3.pop()
+            //It Removes element at end of arry
+            console.log(arr3)//'javaScript' array
+
+            arr3.unshift("unshift")
+            //add element at beginning of an arry
+            console.log(arr3)
+            arr3.unshift("addingelement")
+            console.log(arr3)
+            arr3.shift()
+            //Remove element beginning of an arry
+            console.log(arr3)
+
+
+            let tree={
+                'name':'mango',
+                'lifeSpan':10,
+                'season':'RainySeason'
+            }
+            console.log(tree)
+            let cococnutree={
+                'name':'cococnut',
+                'lifeSpan': 100,
+                'season':'WinterSeason'
+            }
+            console.log(cococnutree)
+            let trees=[]
+            trees.push(tree)
+            trees.unshift(cococnutree)
+            console.log(trees)
+            for(let i=0;i<trees.length;i++){
+                console.log("tree names================")
+                console.log(trees[i].name)//for accrssing only one property
+                console.log(trees[i].lifeSpan)
+                console.log(trees[i].season)
+            }
+            
+            
+             function logIn(){
+                console.log("Calling login function")
+                console.log(a)
+                console.log(b)
+
+                
+                 var logInButton = document.getElementById("email") 
+                 console.log(email.value)
+                 let password = document.getElementById("password")
+                 console.log(password.value)
+                 let registerDataString = localStorage.getItem("NoKey")
+                 console.log(registerDataString)
+                 console.log(registerDataString.email)
+                 let registerObject = JSON.parse(registerDataString)
+                 console.log(registerObject)
+                 console.log(registerObject.email)
+                 if(email.value == registerObject.email && password.value==registerObject.password){
+                    console.log("Login Success")
+                    // window.location.href='Bootstrap1.html'
+                    sessionStorage.setItem("username", registerObject.firstName)
+                        window.location.href='home.html'
+                        //home.html-name of the user
+                        //data in html
+                        //==,===
+                    }
+                 else{
+                    console.log("Email or Password is invalid")
+                 }
+                
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <div>
+                <label>Enter EmailId</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+                <label>Enter Password</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <button type="button" onclick="logIn()" id="logInButton">LogIn</button>
+        </form>
+    </body>
+</html>   
